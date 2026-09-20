@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openfire-ai"
+version = "1.4.9"
+description = "Free AI models from your terminal"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "requests>=2.31.0",
+    "rich>=13.7.0",
+    "prompt_toolkit>=3.0.43",
+]
+
+[project.scripts]
+openfire = "openfire.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["openfire*"]
