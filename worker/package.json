@@ -1,0 +1,21 @@
+{
+  "name": "openfire-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create openfire-db",
+    "db:init": "wrangler d1 execute openfire-db --file=schema.sql",
+    "db:init:remote": "wrangler d1 execute openfire-db --file=schema.sql --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0",
+    "typescript": "^5.5.0",
+    "@cloudflare/workers-types": "^4.20241205.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20260815.1": true
+  }
+}
